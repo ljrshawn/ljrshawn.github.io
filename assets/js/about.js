@@ -22,6 +22,10 @@ function addAbout() {
     var h3 = document.createElement("h3")
     h3.appendChild(document.createTextNode("Shawn Lyu"))
     leftTopRow.appendChild(h3)
+    var h5 = document.createElement("h5")
+    h5.setAttribute('class', 'text-secondary')
+    h5.appendChild(document.createTextNode("Master of Computing and Innovation"))
+    leftTopRow.appendChild(h5)
     leftCol.appendChild(leftTopRow)
 
     // Detail
