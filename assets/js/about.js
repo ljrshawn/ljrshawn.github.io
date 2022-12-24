@@ -43,17 +43,9 @@ function addAbout() {
     var leftSclRow = document.createElement("div")
     leftSclRow.setAttribute('id', 'Social')
     leftSclRow.setAttribute('class', 'row text-center')
-    leftSclRow.setAttribute('style', 'margin-right: 60%;margin-top: 10%;')
+    // leftSclRow.setAttribute('style', 'margin-right: 60%;margin-top: 10%;')
     leftCol.appendChild(leftSclRow)
     addSocial(leftSclRow)
-
-    // Resume
-    var leftBtmRow = document.createElement("div")
-    leftBtmRow.setAttribute('id', 'Resume')
-    leftBtmRow.setAttribute('class', 'row text-center')
-    leftBtmRow.setAttribute('style', 'margin-right: 72%;margin-top: 5%;margin-left: 10%;')
-    leftCol.appendChild(leftBtmRow)
-    addResume(leftBtmRow)
 
     // Mid
     var midCol = document.createElement("div")
@@ -80,7 +72,7 @@ function addAbout() {
 function addSocial(location) {
     // Email
     var colE = document.createElement("div")
-    colE.setAttribute('class', 'col')
+    colE.setAttribute('class', 'col-1')
     location.appendChild(colE)
     var a = document.createElement("a")
     a.setAttribute('href', 'mailto:jingran.lyu@outlook.com')
@@ -95,7 +87,7 @@ function addSocial(location) {
 
     // Github
     var colG = document.createElement("div")
-    colG.setAttribute('class', 'col')
+    colG.setAttribute('class', 'col-1')
     location.appendChild(colG)
     var a = document.createElement("a")
     a.setAttribute('href', 'https://github.com/ljrshawn')
@@ -110,7 +102,7 @@ function addSocial(location) {
 
     // Linkedln
     var colL = document.createElement("div")
-    colL.setAttribute('class', 'col')
+    colL.setAttribute('class', 'col-1')
     location.appendChild(colL)
     var a = document.createElement("a")
     a.setAttribute('href', 'https://www.linkedin.com/in/shawn-jr-lyu/')
@@ -121,18 +113,30 @@ function addSocial(location) {
     colL.appendChild(a)
     var i = document.createElement("i")
     i.setAttribute('class', 'fa-brands fa-linkedin fa-2x')
-    a.appendChild(i)    
+    a.appendChild(i)  
+    
+    // Resume
+    // var leftBtmRow = document.createElement("div")
+    // leftBtmRow.setAttribute('id', 'Resume')
+    // leftBtmRow.setAttribute('class', 'row text-center')
+    // // leftBtmRow.setAttribute('style', 'margin-right: 72%;margin-top: 5%;margin-left: 10%;')
+    // leftCol.appendChild(leftBtmRow)
+    addResume(location)
 }
 
 function addResume(location) {
+    var colR = document.createElement("div")
+    colR.setAttribute('class', 'col-2')
+    location.appendChild(colR)
+
     var a = document.createElement("a")
     a.setAttribute('href', 'assets/pdf/resume_2022.docx.pdf')
     a.setAttribute('title', 'resume')
-    a.setAttribute('class', 'btn btn-secondary')
+    a.setAttribute('class', 'btn btn-secondary btn-sm')
     a.setAttribute('target', '#')
     a.setAttribute('role', 'button')
     a.innerHTML = "Resume"
-    location.appendChild(a)
+    colR.appendChild(a)
 }
 
 addAbout()
