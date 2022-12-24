@@ -85,6 +85,11 @@ function addSocial(location) {
     i.setAttribute('class', 'fa-solid fa-envelope fa-2x')
     a.appendChild(i)
 
+    // Blank
+    var colB = document.createElement("div")
+    colB.setAttribute('class', 'col-1')
+    location.appendChild(colB)
+
     // Github
     var colG = document.createElement("div")
     colG.setAttribute('class', 'col-1')
@@ -100,6 +105,11 @@ function addSocial(location) {
     i.setAttribute('class', 'fa-brands fa-square-github fa-2x')
     a.appendChild(i)
 
+    // Blank
+    var colB = document.createElement("div")
+    colB.setAttribute('class', 'col-1')
+    location.appendChild(colB)
+
     // Linkedln
     var colL = document.createElement("div")
     colL.setAttribute('class', 'col-1')
@@ -114,6 +124,11 @@ function addSocial(location) {
     var i = document.createElement("i")
     i.setAttribute('class', 'fa-brands fa-linkedin fa-2x')
     a.appendChild(i)  
+    
+    // Blank
+    var colB = document.createElement("div")
+    colB.setAttribute('class', 'col-1')
+    location.appendChild(colB)
     
     // Resume
     // var leftBtmRow = document.createElement("div")
