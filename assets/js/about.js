@@ -4,7 +4,7 @@ function addAbout() {
     var newdiv = document.createElement("div")
     newdiv.setAttribute('id', 'About')
     newdiv.setAttribute('class', 'container bg-light')
-    newdiv.setAttribute('style', 'padding:100px 100px;')
+    newdiv.setAttribute('style', 'padding:5% 7%;')
     title.appendChild(newdiv)
 
     var newRow = document.createElement("div")
@@ -127,11 +127,11 @@ function addSocial(location) {
 function addResume(location) {
     var a = document.createElement("a")
     a.setAttribute('href', 'assets/pdf/resume_2022.docx.pdf')
-    a.setAttribute('title', 'My resume')
+    a.setAttribute('title', 'resume')
     a.setAttribute('class', 'btn btn-secondary')
     a.setAttribute('target', '#')
     a.setAttribute('role', 'button')
-    a.innerHTML = "My Resume"
+    a.innerHTML = "Resume"
     location.appendChild(a)
 }
 

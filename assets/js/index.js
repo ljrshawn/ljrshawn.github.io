@@ -1,6 +1,5 @@
 var header = document.querySelector("header")
 var container = document.getElementById("container")
-var bottom = document.getElementById("bottom")
 
 const name_nav = {
     0: 'About',
@@ -52,7 +51,7 @@ function addMain() {
         var newDiv = document.createElement("div")
         newDiv.setAttribute('id', name_nav[i])
         newDiv.setAttribute('class', 'container-fluid bg-light text-dark')
-        newDiv.setAttribute('style', 'padding:50px 150px;')
+        newDiv.setAttribute('style', 'padding:4% 12%;')
         container.appendChild(newDiv)
 
         var newCon = document.createElement("div")
@@ -319,16 +318,5 @@ function addAdditional(parDiv, index) {
     }
 }
 
-function addFooter() {
-    let newDiv = document.createElement("div")
-    newDiv.setAttribute('class', 'container-fluid bg-light text-dark')
-    var span = document.createElement("span")
-    let newContent = document.createTextNode(" © Copyright 2022 Shawn Lyu.")
-    span.appendChild(newContent)
-    newDiv.appendChild(span)
-    bottom.appendChild(newDiv)
-}
-
 addHeader()
 addMain()
-addFooter()
