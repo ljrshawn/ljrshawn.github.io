@@ -20,7 +20,7 @@ container.setAttribute('class', 'container bg-light')
 
 function addHeader() {
     var newNav = document.createElement("nav")
-    newNav.setAttribute('class', 'navbar navbar-expand-lg bg-light navbar-light')
+    newNav.setAttribute('class', 'navbar navbar-expand-sm bg-light navbar-light')
     newNav.setAttribute('style', 'margin-right: 10%;')
     header.appendChild(newNav)
 
