@@ -17,7 +17,7 @@ document.querySelector("body").setAttribute('data-bs-spy', 'scroll')
 document.querySelector("body").setAttribute('data-bs-target', '.navbar')
 document.querySelector("body").setAttribute('data-bs-offset', '5')
 document.querySelector("footer").setAttribute('class', "text-center")
-container.setAttribute('class', 'container-fluid bg-light')
+container.setAttribute('class', 'container bg-light')
 
 function addHeader() {
     var newNav = document.createElement("nav")
@@ -52,7 +52,7 @@ function addMain() {
         var newDiv = document.createElement("div")
         newDiv.setAttribute('id', name_nav[i])
         newDiv.setAttribute('class', 'container-fluid bg-light text-dark')
-        newDiv.setAttribute('style', 'padding:50px 400px;')
+        newDiv.setAttribute('style', 'padding:50px 150px;')
         container.appendChild(newDiv)
 
         var newCon = document.createElement("div")

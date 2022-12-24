@@ -3,8 +3,8 @@ var title = document.getElementById("title")
 function addAbout() {
     var newdiv = document.createElement("div")
     newdiv.setAttribute('id', 'About')
-    newdiv.setAttribute('class', 'container-fluid bg-light')
-    newdiv.setAttribute('style', 'padding:100px 400px;')
+    newdiv.setAttribute('class', 'container bg-light')
+    newdiv.setAttribute('style', 'padding:100px 100px;')
     title.appendChild(newdiv)
 
     var newRow = document.createElement("div")
