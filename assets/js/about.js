@@ -40,11 +40,20 @@ function addAbout() {
     leftMidRow.appendChild(p)
 
     // Social
+    var leftSclRow = document.createElement("div")
+    leftSclRow.setAttribute('id', 'Social')
+    leftSclRow.setAttribute('class', 'row text-center')
+    leftSclRow.setAttribute('style', 'margin-right: 60%;margin-top: 20%;')
+    leftCol.appendChild(leftSclRow)
+    addSocial(leftSclRow)
+
+    // Resume
     var leftBtmRow = document.createElement("div")
+    leftBtmRow.setAttribute('id', 'Resume')
     leftBtmRow.setAttribute('class', 'row text-center')
-    leftBtmRow.setAttribute('style', 'margin-right: 60%;margin-top: 20%;')
+    leftBtmRow.setAttribute('style', 'margin-right: 60%;')
     leftCol.appendChild(leftBtmRow)
-    addSocial(leftBtmRow)
+    addResume(leftBtmRow)
 
     // Right
     var rightCol = document.createElement("div")
@@ -107,7 +116,11 @@ function addSocial(location) {
     colL.appendChild(a)
     var i = document.createElement("i")
     i.setAttribute('class', 'fa-brands fa-linkedin fa-2x')
-    a.appendChild(i)
+    a.appendChild(i)    
+}
+
+function addResume(location) {
+
 }
 
 addAbout()
