@@ -1,9 +1,9 @@
 var header = document.querySelector("header")
-var title = document.getElementById("title")
 var container = document.getElementById("container")
 var bottom = document.getElementById("bottom")
 
 const name_nav = {
+    0: 'About',
     1: 'Education',
     2: 'Experience',
     3: 'Projects',
@@ -30,7 +30,7 @@ function addHeader() {
     newUl.setAttribute('class', 'navbar-nav')
     newDiv.appendChild(newUl)
 
-    for (let i = 1; i <= Object.keys(name_nav).length; i++) {
+    for (let i = 0; i < Object.keys(name_nav).length; i++) {
         var newLi = document.createElement("li")
         newLi.setAttribute('class', 'nav-item')
 
@@ -45,7 +45,7 @@ function addHeader() {
 }
 
 function addMain() {
-    for (let i = 1; i <= Object.keys(name_nav).length; i++) {
+    for (let i = 1; i < Object.keys(name_nav).length; i++) {
         var newDiv = document.createElement("div")
         newDiv.setAttribute('id', name_nav[i])
         newDiv.setAttribute('class', 'container-fluid bg-light text-dark')
@@ -253,12 +253,67 @@ function addProjects(parDiv, index) {
     }
 }
 
-function addLanguages(parDiv, index) {
+const name_lan = {
+    1: ['Proficient', 'C++, Java, Python'],
+    2: ['Experienced', 'Javascript, MangoDB, SQL'],
+}
 
+function addLanguages(parDiv, index) {
+    for (let i = 1; i <= Object.keys(name_lan).length; i++) {
+        var newRow = document.createElement("div")
+        newRow.setAttribute('class', 'row')
+        parDiv.appendChild(newRow)
+
+        // Level
+        var newCol = document.createElement("div")
+        newCol.setAttribute('class', 'col')
+        var p = document.createElement("p")
+        p.setAttribute('class', 'fw-bold')
+        p.innerHTML = name_lan[i][0]
+        newCol.appendChild(p)
+        newRow.appendChild(newCol)
+
+        // Detail
+        var newRow = document.createElement("div")
+        newRow.setAttribute('class', 'row')
+        parDiv.appendChild(newRow)
+        var newCol = document.createElement("div")
+        newCol.setAttribute('class', 'col')
+        var p = document.createElement("p")
+        p.innerHTML = name_lan[i][1]
+        newCol.appendChild(p)
+        newRow.appendChild(newCol)
+    }
+}
+
+const name_add = {
+    1: ['Ravi'+"'"+'s Study Program (2022)', ' - 13 Week Intensive Programming Bootcamp.'],
+    2: ['Adelaide Graduate Award (2022)', ' - Involves in volunteer jobs and cross-culture communication events.'],
+    3: ['Exchange Study (2015)', ' - Study electrical engineering at the Department of Electrical Engineering, National Chiao Tung University (Taiwan).'],
+    4: ['German Volkswagen Automation Training (2015)', ' - Learning and training for Siemens automation systems.'],
 }
 
 function addAdditional(parDiv, index) {
+    for (let i = 1; i <= Object.keys(name_add).length; i++) {
+        var newRow = document.createElement("div")
+        newRow.setAttribute('class', 'row')
+        parDiv.appendChild(newRow)
 
+        var newCol = document.createElement("div")
+        newCol.setAttribute('class', 'col')
+        newRow.appendChild(newCol)
+        var p = document.createElement("p")
+        newCol.appendChild(p)
+
+        // Level
+        var span = document.createElement("span")
+        span.setAttribute('class', 'fw-bold')
+        span.innerHTML = '&#8226; ' + name_add[i][0]
+        p.appendChild(span)
+
+        // Detail
+        p.appendChild(document.createTextNode(name_add[i][1]))
+    }
 }
 
 function addFooter() {
