@@ -15,7 +15,7 @@ header.setAttribute('class', 'sticky-top')
 document.querySelector("body").setAttribute('data-bs-spy', 'scroll')
 document.querySelector("body").setAttribute('data-bs-target', '.navbar')
 document.querySelector("body").setAttribute('data-bs-offset', '5')
-document.querySelector("footer").setAttribute('class', "fixed-bottom text-center")
+document.querySelector("footer").setAttribute('class', "text-center")
 
 function addHeader() {
     var newNav = document.createElement("nav")
@@ -318,10 +318,12 @@ function addAdditional(parDiv, index) {
 
 function addFooter() {
     let newDiv = document.createElement("div")
+    newDiv.setAttribute('class', 'container-fluid bg-light text-dark')
+    var span = document.createElement("span")
     let newContent = document.createTextNode(" © Copyright 2022 Shawn Lyu.")
-    newDiv.appendChild(newContent)
+    span.appendChild(newContent)
+    newDiv.appendChild(span)
     bottom.appendChild(newDiv)
-
 }
 
 addHeader()

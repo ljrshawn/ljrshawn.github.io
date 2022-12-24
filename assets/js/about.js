@@ -43,7 +43,7 @@ function addAbout() {
     var leftSclRow = document.createElement("div")
     leftSclRow.setAttribute('id', 'Social')
     leftSclRow.setAttribute('class', 'row text-center')
-    leftSclRow.setAttribute('style', 'margin-right: 60%;margin-top: 20%;')
+    leftSclRow.setAttribute('style', 'margin-right: 60%;')
     leftCol.appendChild(leftSclRow)
     addSocial(leftSclRow)
 
@@ -51,7 +51,7 @@ function addAbout() {
     var leftBtmRow = document.createElement("div")
     leftBtmRow.setAttribute('id', 'Resume')
     leftBtmRow.setAttribute('class', 'row text-center')
-    leftBtmRow.setAttribute('style', 'margin-right: 60%;')
+    leftBtmRow.setAttribute('style', 'margin-right: 72%;margin-top: 2%;margin-left: 7%;')
     leftCol.appendChild(leftBtmRow)
     addResume(leftBtmRow)
 
@@ -120,7 +120,14 @@ function addSocial(location) {
 }
 
 function addResume(location) {
-
+    var a = document.createElement("a")
+    a.setAttribute('href', 'assets/pdf/resume_2022.docx.pdf')
+    a.setAttribute('title', 'My resume')
+    a.setAttribute('class', 'btn btn-secondary')
+    a.setAttribute('target', '#')
+    a.setAttribute('role', 'button')
+    a.innerHTML = "My Resume"
+    location.appendChild(a)
 }
 
 addAbout()
