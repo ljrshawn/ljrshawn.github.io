@@ -11,15 +11,18 @@ const name_nav = {
     5: 'Additional',
 };
 
-header.setAttribute('class', 'sticky-top')
+header.setAttribute('class', 'sticky-top justify-content-end bg-light')
+header.setAttribute('style', 'display: flex;')
 document.querySelector("body").setAttribute('data-bs-spy', 'scroll')
 document.querySelector("body").setAttribute('data-bs-target', '.navbar')
 document.querySelector("body").setAttribute('data-bs-offset', '5')
 document.querySelector("footer").setAttribute('class', "text-center")
+container.setAttribute('class', 'container-fluid bg-light')
 
 function addHeader() {
     var newNav = document.createElement("nav")
     newNav.setAttribute('class', 'navbar navbar-expand-lg bg-light navbar-light')
+    newNav.setAttribute('style', 'margin-right: 10%;')
     header.appendChild(newNav)
 
     var newDiv = document.createElement("div")
@@ -49,7 +52,7 @@ function addMain() {
         var newDiv = document.createElement("div")
         newDiv.setAttribute('id', name_nav[i])
         newDiv.setAttribute('class', 'container-fluid bg-light text-dark')
-        newDiv.setAttribute('style', 'padding:50px 50px;')
+        newDiv.setAttribute('style', 'padding:50px 400px;')
         container.appendChild(newDiv)
 
         var newCon = document.createElement("div")

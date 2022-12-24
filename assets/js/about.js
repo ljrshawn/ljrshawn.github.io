@@ -3,8 +3,8 @@ var title = document.getElementById("title")
 function addAbout() {
     var newdiv = document.createElement("div")
     newdiv.setAttribute('id', 'About')
-    newdiv.setAttribute('class', 'container bg-light')
-    newdiv.setAttribute('style', 'padding:50px 50px;')
+    newdiv.setAttribute('class', 'container-fluid bg-light')
+    newdiv.setAttribute('style', 'padding:100px 400px;')
     title.appendChild(newdiv)
 
     var newRow = document.createElement("div")
@@ -19,9 +19,9 @@ function addAbout() {
     // About
     var leftTopRow = document.createElement("div")
     leftTopRow.setAttribute('class', 'row')
-    var h3 = document.createElement("h3")
-    h3.appendChild(document.createTextNode("Shawn Lyu"))
-    leftTopRow.appendChild(h3)
+    var h2 = document.createElement("h2")
+    h2.appendChild(document.createTextNode("Shawn Lyu"))
+    leftTopRow.appendChild(h2)
     var h5 = document.createElement("h5")
     h5.setAttribute('class', 'text-secondary')
     h5.appendChild(document.createTextNode("Master of Computing and Innovation"))
@@ -43,7 +43,7 @@ function addAbout() {
     var leftSclRow = document.createElement("div")
     leftSclRow.setAttribute('id', 'Social')
     leftSclRow.setAttribute('class', 'row text-center')
-    leftSclRow.setAttribute('style', 'margin-right: 60%;')
+    leftSclRow.setAttribute('style', 'margin-right: 60%;margin-top: 10%;')
     leftCol.appendChild(leftSclRow)
     addSocial(leftSclRow)
 
@@ -51,9 +51,14 @@ function addAbout() {
     var leftBtmRow = document.createElement("div")
     leftBtmRow.setAttribute('id', 'Resume')
     leftBtmRow.setAttribute('class', 'row text-center')
-    leftBtmRow.setAttribute('style', 'margin-right: 72%;margin-top: 2%;margin-left: 7%;')
+    leftBtmRow.setAttribute('style', 'margin-right: 72%;margin-top: 5%;margin-left: 10%;')
     leftCol.appendChild(leftBtmRow)
     addResume(leftBtmRow)
+
+    // Mid
+    var midCol = document.createElement("div")
+    midCol.setAttribute('class', 'col-1')
+    newRow.appendChild(midCol)
 
     // Right
     var rightCol = document.createElement("div")
