@@ -33,7 +33,8 @@ function addHeader() {
   // newButton.setAttribute("class", "navbar-toggler");
   // newButton.setAttribute("type", "button");
   // newButton.setAttribute("data-bs-toggle", "offcanvas");
-  // newButton.setAttribute("data-bs-target", "#navbar");
+  // newButton.setAttribute("data-bs-target", "#offcanvasNavbar");
+  // newButton.setAttribute("aria-controls", "offcanvasNavbar");
   // newDiv.appendChild(newButton);
 
   // var newSpan = document.createElement("span");
@@ -42,7 +43,9 @@ function addHeader() {
 
   // nav
   var newUl = document.createElement("ul");
-  newUl.setAttribute("class", "navbar-nav");
+  newUl.setAttribute("class", "navbar-nav offcanvas offcanvas-end");
+  newUl.setAttribute("tabindex", "-1");
+  newUl.setAttribute("id", "offcanvasNavbar");
   newDiv.appendChild(newUl);
 
   for (let i = 0; i < Object.keys(name_nav).length; i++) {

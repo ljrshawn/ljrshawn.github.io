@@ -3,9 +3,10 @@
   html {
     font-size: 9px;
   }
-  .navbar-expand .navbar-toggler {
+
+  /* .navbar-expand .navbar-toggler {
     display: block;
-  }
+  } */
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -13,9 +14,9 @@
   html {
     font-size: 13px;
   }
-  .navbar-expand .navbar-toggler {
+  /* .navbar-expand .navbar-toggler {
     display: none;
-  }
+  } */
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -26,7 +27,7 @@
   .container {
     max-width: 960px;
   }
-  .navbar-expand .navbar-toggler {
+  /* .navbar-expand .navbar-toggler {
     display: none;
-  }
+  } */
 }
