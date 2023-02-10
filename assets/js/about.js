@@ -1,10 +1,11 @@
 var title = document.getElementById("title");
+title.setAttribute("class", "container bg-light");
 
 function addAbout() {
   var newdiv = document.createElement("div");
   newdiv.setAttribute("id", "About");
-  newdiv.setAttribute("class", "container bg-light");
-  newdiv.setAttribute("style", "padding:5% 7%;");
+  newdiv.setAttribute("class", "container-fluid bg-light text-dark");
+  newdiv.setAttribute("style", "padding:4% 12%;");
   title.appendChild(newdiv);
 
   var newRow = document.createElement("div");
@@ -61,7 +62,6 @@ function addAbout() {
   // Photo
   var rightTopRow = document.createElement("div");
   rightTopRow.setAttribute("class", "row text-center");
-  rightTopRow.setAttribute("width", "90%");
   rightCol.appendChild(rightTopRow);
   var photo = document.createElement("img");
   photo.setAttribute(

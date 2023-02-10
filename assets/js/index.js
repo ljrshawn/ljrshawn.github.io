@@ -20,14 +20,27 @@ container.setAttribute("class", "container bg-light");
 
 function addHeader() {
   var newNav = document.createElement("nav");
-  newNav.setAttribute("class", "navbar navbar-expand-sm bg-light navbar-light");
-  newNav.setAttribute("style", "margin-right: 10%;");
+  newNav.setAttribute("class", "navbar navbar-expand bg-light navbar-light");
+  // newNav.setAttribute("style", "margin-right: 10%;");
   header.appendChild(newNav);
 
   var newDiv = document.createElement("div");
   newDiv.setAttribute("class", "container-fluid");
   newNav.appendChild(newDiv);
 
+  // Button
+  // var newButton = document.createElement("button");
+  // newButton.setAttribute("class", "navbar-toggler");
+  // newButton.setAttribute("type", "button");
+  // newButton.setAttribute("data-bs-toggle", "offcanvas");
+  // newButton.setAttribute("data-bs-target", "#navbar");
+  // newDiv.appendChild(newButton);
+
+  // var newSpan = document.createElement("span");
+  // newSpan.setAttribute("class", "navbar-toggler-icon");
+  // newButton.appendChild(newSpan);
+
+  // nav
   var newUl = document.createElement("ul");
   newUl.setAttribute("class", "navbar-nav");
   newDiv.appendChild(newUl);
@@ -51,7 +64,11 @@ function addMain() {
     var newDiv = document.createElement("div");
     newDiv.setAttribute("id", name_nav[i]);
     newDiv.setAttribute("class", "container-fluid bg-light text-dark");
-    newDiv.setAttribute("style", "padding:4% 12%;");
+    if (i == Object.keys(name_nav).length - 1) {
+      newDiv.setAttribute("style", "padding:4% 12%; padding-bottom:10%;");
+    } else {
+      newDiv.setAttribute("style", "padding:4% 12%;");
+    }
     container.appendChild(newDiv);
 
     var newCon = document.createElement("div");
