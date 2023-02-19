@@ -305,8 +305,8 @@ function addProjects(parDiv, index) {
 }
 
 const name_lan = {
-  1: ["Proficient", "C++, Java, Python"],
-  2: ["Experienced", "Javascript, MangoDB, SQL"],
+  1: ["Proficient", "C++, Java, Python, Javascript, Git"],
+  2: ["Experienced", "Node.js, MangoDB"],
 };
 
 function addLanguages(parDiv, index) {
@@ -339,25 +339,33 @@ function addLanguages(parDiv, index) {
 
 const name_add = {
   1: [
-    "Ravi" + "'" + "s Study Program (2022)",
-    " - 13 Week Intensive Programming Bootcamp.",
+    "German Volkswagen Automation Training (2015)",
+    " - Learning and training for Siemens automation systems.",
   ],
+
   2: [
-    "Adelaide Graduate Award (2022)",
-    " - Involves in volunteer jobs and cross-culture communication events.",
-  ],
-  3: [
     "Exchange Study (2015)",
     " - Study electrical engineering at the Department of Electrical Engineering, National Chiao Tung University (Taiwan).",
   ],
+
+  3: [
+    "Adelaide Graduate Award (2022)",
+    " - Involves in volunteer jobs and cross-culture communication events.",
+  ],
+
   4: [
-    "German Volkswagen Automation Training (2015)",
-    " - Learning and training for Siemens automation systems.",
+    "Ravi" + "'" + "s Study Program (2022)",
+    " - 13 Week Intensive Programming Bootcamp.",
+  ],
+
+  5: [
+    "Node.js, Express, MongoDB & More (2023)",
+    " - Master the entire modern back-end stack: Node, Express, MongoDB and Mongoose. Build a complete, beautiful & real-world application from start to finish (API and server-side rendered website)",
   ],
 };
 
 function addAdditional(parDiv, index) {
-  for (let i = 1; i <= Object.keys(name_add).length; i++) {
+  for (let i = Object.keys(name_add).length; i > 0; i--) {
     var newRow = document.createElement("div");
     newRow.setAttribute("class", "row");
     parDiv.appendChild(newRow);

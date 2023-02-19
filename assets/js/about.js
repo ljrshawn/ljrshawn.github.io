@@ -35,10 +35,7 @@ function addAbout() {
   leftCol.appendChild(leftMidRow);
   var p = document.createElement("p");
   p.innerHTML =
-    "I am Shawn Lyu (Jingran Lyu), currently, a Master's student at the University of Adelaide. " +
-    "A student Software Engineer with 2 years of experience in developing Object Oriented software " +
-    "in Java, C++, and Python, and 6+ months of experience in Full Stack Development with JavaScript, " +
-    "React, MongoDB, and NodeJS. Based in Adelaide, South Australia — currently seeking internship roles.";
+    "Hello! My name is Shawn (Jingran) Lyu,  and I am currently pursuing a Master's degree at the University of Adelaide. I am set to graduate in June of this year. I have two years of experience in developing Object Oriented software using Java, C++, and Python. In addition, I have gained practical experience in Full Stack Development, utilizing technologies such as JavaScript, Express, MongoDB, and NodeJS, for over six months. I am currently based in Adelaide, South Australia, and am actively seeking internship or job opportunities.";
   leftMidRow.appendChild(p);
 
   // Social
@@ -80,7 +77,7 @@ function addSocial(location) {
   colE.setAttribute("class", "col-1");
   location.appendChild(colE);
   var a = document.createElement("a");
-  a.setAttribute("href", "mailto:jingran.lyu@outlook.com");
+  a.setAttribute("href", "mailto:shawn.lyu@shawnl.dev");
   a.setAttribute("title", "Email");
   a.setAttribute("target", "_blank");
   a.setAttribute("rel", "noopener");
@@ -150,7 +147,7 @@ function addResume(location) {
   location.appendChild(colR);
 
   var a = document.createElement("a");
-  a.setAttribute("href", "assets/pdf/resume_2022.docx.pdf");
+  a.setAttribute("href", "assets/pdf/Shawn_Lyu_resume_2023.pdf");
   a.setAttribute("title", "resume");
   a.setAttribute("class", "btn btn-secondary btn-sm");
   a.setAttribute("target", "#");
