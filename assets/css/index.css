@@ -1,12 +1,8 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 320px) {
   html {
-    font-size: 9px;
+    font-size: 12px;
   }
-
-  /* .navbar-expand .navbar-toggler {
-    display: block;
-  } */
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -14,9 +10,6 @@
   html {
     font-size: 13px;
   }
-  /* .navbar-expand .navbar-toggler {
-    display: none;
-  } */
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -27,7 +20,43 @@
   .container {
     max-width: 960px;
   }
-  /* .navbar-expand .navbar-toggler {
-    display: none;
-  } */
+}
+
+.nav-link {
+  color: #90caf9 !important;
+}
+
+.nav-link:hover {
+  color: #2196f3 !important;
+}
+
+.nav-link:focus {
+  color: #1976d2 !important;
+}
+
+.nav-link.active {
+  color: #1976d2 !important;
+}
+
+.link-primary {
+  color: #90caf9 !important;
+}
+
+.link-primary:hover {
+  color: #2196f3 !important;
+}
+
+.link-primary:focus {
+  color: #2196f3 !important;
+}
+
+.btn {
+  --bs-btn-bg: #90caf9;
+  --bs-btn-border-color: #90caf9;
+  --bs-btn-hover-bg: #2196f3;
+  --bs-btn-hover-border-color: #2196f3;
+  --bs-btn-active-bg: #2196f3;
+  --bs-btn-active-border-color: #2196f3;
+  --bs-btn-disabled-bg: #90caf9;
+  --bs-btn-disabled-border-color: #90caf9;
 }

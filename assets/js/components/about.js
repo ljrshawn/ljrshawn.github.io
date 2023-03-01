@@ -1,3 +1,5 @@
+import aboutMe from "../../db/aboutData.js";
+
 var title = document.getElementById("title");
 title.setAttribute("class", "container bg-light");
 
@@ -21,11 +23,11 @@ function addAbout() {
   var leftTopRow = document.createElement("div");
   leftTopRow.setAttribute("class", "row");
   var h2 = document.createElement("h2");
-  h2.appendChild(document.createTextNode("Shawn Lyu"));
+  h2.appendChild(document.createTextNode(aboutMe.name));
   leftTopRow.appendChild(h2);
   var h5 = document.createElement("h5");
   h5.setAttribute("class", "text-secondary");
-  h5.appendChild(document.createTextNode("Master of Computing and Innovation"));
+  h5.appendChild(document.createTextNode(aboutMe.curPosition));
   leftTopRow.appendChild(h5);
   leftCol.appendChild(leftTopRow);
 
@@ -34,15 +36,13 @@ function addAbout() {
   leftMidRow.setAttribute("class", "row");
   leftCol.appendChild(leftMidRow);
   var p = document.createElement("p");
-  p.innerHTML =
-    "Hello! My name is Shawn (Jingran) Lyu,  and I am currently pursuing a Master's degree at the University of Adelaide. I am set to graduate in June of this year. I have two years of experience in developing Object Oriented software using Java, C++, and Python. In addition, I have gained practical experience in Full Stack Development, utilizing technologies such as JavaScript, Express, MongoDB, and NodeJS, for over six months. I am currently based in Adelaide, South Australia, and am actively seeking internship or job opportunities.";
+  p.innerHTML = aboutMe.introduction;
   leftMidRow.appendChild(p);
 
   // Social
   var leftSclRow = document.createElement("div");
   leftSclRow.setAttribute("id", "Social");
   leftSclRow.setAttribute("class", "row text-center");
-  // leftSclRow.setAttribute('style', 'margin-right: 60%;margin-top: 10%;')
   leftCol.appendChild(leftSclRow);
   addSocial(leftSclRow);
 
@@ -61,13 +61,10 @@ function addAbout() {
   rightTopRow.setAttribute("class", "row text-center");
   rightCol.appendChild(rightTopRow);
   var photo = document.createElement("img");
-  photo.setAttribute(
-    "src",
-    "https://drive.google.com/uc?export=view&id=1jtJxRSmBLz5P5-gBqYwwT0btzLGYORUG"
-  );
+  photo.setAttribute("src", aboutMe.photo);
   photo.setAttribute("alt", "Could not load image");
   photo.setAttribute("class", "img-fluid");
-  photo.setAttribute("title", "Shawn Lyu");
+  photo.setAttribute("title", aboutMe.name);
   rightTopRow.appendChild(photo);
 }
 
@@ -77,11 +74,11 @@ function addSocial(location) {
   colE.setAttribute("class", "col-1");
   location.appendChild(colE);
   var a = document.createElement("a");
-  a.setAttribute("href", "mailto:shawn.lyu@shawnl.dev");
+  a.setAttribute("href", `mailto:${aboutMe.email}`);
   a.setAttribute("title", "Email");
   a.setAttribute("target", "_blank");
   a.setAttribute("rel", "noopener");
-  a.setAttribute("class", "link-secondary");
+  a.setAttribute("class", "link-primary");
   colE.appendChild(a);
   var i = document.createElement("i");
   i.setAttribute("class", "fa-solid fa-envelope fa-2x");
@@ -97,11 +94,11 @@ function addSocial(location) {
   colG.setAttribute("class", "col-1");
   location.appendChild(colG);
   var a = document.createElement("a");
-  a.setAttribute("href", "https://github.com/ljrshawn");
+  a.setAttribute("href", aboutMe.github);
   a.setAttribute("title", "Github");
   a.setAttribute("target", "_blank");
   a.setAttribute("rel", "noopener");
-  a.setAttribute("class", "link-secondary");
+  a.setAttribute("class", "link-primary");
   colG.appendChild(a);
   var i = document.createElement("i");
   i.setAttribute("class", "fa-brands fa-square-github fa-2x");
@@ -112,16 +109,16 @@ function addSocial(location) {
   colB.setAttribute("class", "col-1");
   location.appendChild(colB);
 
-  // Linkedln
+  // Linkedin
   var colL = document.createElement("div");
   colL.setAttribute("class", "col-1");
   location.appendChild(colL);
   var a = document.createElement("a");
-  a.setAttribute("href", "https://www.linkedin.com/in/shawn-jr-lyu/");
+  a.setAttribute("href", aboutMe.linkedin);
   a.setAttribute("title", "Linkedln");
   a.setAttribute("target", "_blank");
   a.setAttribute("rel", "noopener");
-  a.setAttribute("class", "link-secondary");
+  a.setAttribute("class", "link-primary");
   colL.appendChild(a);
   var i = document.createElement("i");
   i.setAttribute("class", "fa-brands fa-linkedin fa-2x");
@@ -133,11 +130,6 @@ function addSocial(location) {
   location.appendChild(colB);
 
   // Resume
-  // var leftBtmRow = document.createElement("div")
-  // leftBtmRow.setAttribute('id', 'Resume')
-  // leftBtmRow.setAttribute('class', 'row text-center')
-  // // leftBtmRow.setAttribute('style', 'margin-right: 72%;margin-top: 5%;margin-left: 10%;')
-  // leftCol.appendChild(leftBtmRow)
   addResume(location);
 }
 
@@ -147,13 +139,13 @@ function addResume(location) {
   location.appendChild(colR);
 
   var a = document.createElement("a");
-  a.setAttribute("href", "assets/pdf/Shawn_Lyu_resume_2023.pdf");
+  a.setAttribute("href", aboutMe.resume);
   a.setAttribute("title", "resume");
-  a.setAttribute("class", "btn btn-secondary btn-sm");
+  a.setAttribute("class", "btn btn-primary btn-sm");
   a.setAttribute("target", "#");
   a.setAttribute("role", "button");
   a.innerHTML = "Resume";
   colR.appendChild(a);
 }
 
-addAbout();
+export default addAbout;
