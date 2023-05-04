@@ -160,6 +160,27 @@ function addExperience(parDiv, index) {
 
 const name_pro = {
   1: [
+    "Titanic",
+    "Sep 2020",
+    "Create a model using random forests to predict the survival of " +
+      "certain passengers after the sinking of the Titanic. " +
+      "Use Seaborn and Matplotlib to analyze the original data, " +
+      "and perform correlation analysis on multiple sets of data. " +
+      "Clean the data. Finally, predictions are made based on the " +
+      "model obtained from the training data. (Python)",
+    " ",
+  ],
+
+  2: [
+    "E-commerce website conduction and operation",
+    "Mar 2021",
+    "Create an e-commerce website speebuy.com based on the Shopify platform. " +
+      "I was responsible for the construction of the entire webpage, mainly the front-end UI " +
+      "design and coding, as well as the sales and delivery of e-commerce. (JavaScript)",
+    " ",
+  ],
+
+  3: [
     "Distributed system",
     "July 2022",
     "Wrote a web page to simulate and visualize the stability of " +
@@ -171,29 +192,17 @@ const name_pro = {
       "the data feedback and reception of the back end. (JavaScript, NodeJS, Html, CSS and MangoDB)",
     "https://github.com/ljrshawn/Software-Engineering-and-Project",
   ],
-  2: [
-    "E-commerce website conduction and operation",
-    "Mar 2021",
-    "Create an e-commerce website speebuy.com based on the Shopify platform. " +
-      "I was responsible for the construction of the entire webpage, mainly the front-end UI " +
-      "design and coding, as well as the sales and delivery of e-commerce. (JavaScript)",
-    " ",
-  ],
-  3: [
-    "Titanic",
-    "Sep 2020",
-    "Create a model using random forests to predict the survival of " +
-      "certain passengers after the sinking of the Titanic. " +
-      "Use Seaborn and Matplotlib to analyze the original data, " +
-      "and perform correlation analysis on multiple sets of data. " +
-      "Clean the data. Finally, predictions are made based on the " +
-      "model obtained from the training data. (Python)",
-    " ",
+
+  4: [
+    "MyWork",
+    "Mar 2023",
+    "Developing a fully functional full-stack MERN web application comes with complete CRUD functionalities, authentication features, and chart visualizations to help users track their progress and performance over time. The application is designed to help teachers manage and check students' workload and project process, while also allowing students to record their working hours and check on their team members' progress. In this project, I was responsible for nearly all aspects of development, including both front-end and back-end. For the front-end, I utilized React and TypeScript, while for the back-end, I utilized MongoDB and Express. (JavaScript, TypeScript, NodeJS, React, Express, Material UI and MangoDB)",
+    "https://github.com/ljrshawn/MCI-Project-MyWork",
   ],
 };
 
 function addProjects(parDiv, index) {
-  for (let i = 1; i <= Object.keys(name_pro).length; i++) {
+  for (let i = Object.keys(name_pro).length; i > 0; i--) {
     var newRow = document.createElement("div");
     newRow.setAttribute("class", "row");
     parDiv.appendChild(newRow);
@@ -242,7 +251,7 @@ function addProjects(parDiv, index) {
 
 const name_lan = {
   1: ["Proficient", "C++, Java, Python, Javascript, Git"],
-  2: ["Experienced", "Node.js, MangoDB"],
+  2: ["Experienced", "Node.js, MangoDB, TypeScript, React, SQL"],
 };
 
 function addLanguages(parDiv, index) {
@@ -285,16 +294,26 @@ const name_add = {
   ],
 
   3: [
+    "Kaggle SQL Course (2020)",
+    " - Learning and training SQL based on Python.",
+  ],
+
+  4: [
     "Adelaide Graduate Award (2022)",
     " - Involves in volunteer jobs and cross-culture communication events.",
   ],
 
-  4: [
+  5: [
+    "Microsoft Azure AI Fundamentals (AI-900) (2022)",
+    " - Learning how to use Azure and AI services.",
+  ],
+
+  6: [
     "Ravi" + "'" + "s Study Program (2022)",
     " - 13 Week Intensive Programming Bootcamp.",
   ],
 
-  5: [
+  7: [
     "Node.js, Express, MongoDB & More (2023)",
     " - Master the entire modern back-end stack: Node, Express, MongoDB and Mongoose. Build a complete, beautiful & real-world application from start to finish (API and server-side rendered website)",
   ],
