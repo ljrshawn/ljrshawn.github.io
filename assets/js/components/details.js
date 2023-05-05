@@ -299,7 +299,7 @@ const name_add = {
   ],
 
   4: [
-    "Adelaide Graduate Award (2022)",
+    "Global IQ Connect (2022)",
     " - Involves in volunteer jobs and cross-culture communication events.",
   ],
 
