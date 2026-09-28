@@ -18,17 +18,17 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/shawn-jr-lyu/",
   resume: "/pdf/resume.pdf",
   photo: "https://res.cloudinary.com/dp9citrja/image/upload/myWeb/profile.jpg",
-  intro: `Full-stack software engineer with 2+ years of experience building scalable web and
+  intro: `Full-stack software engineer with years of experience building scalable web and
 mobile applications across the full software lifecycle. Experienced in React, React
-Native, Node.js, FastAPI, and PostgreSQL, with a strong focus on backend
+Native, Node.js, FastAPI, ASP.NET Core, and PostgreSQL, with a strong focus on backend
 architecture, performance optimization, and automation testing. Proven ability to
 design and deliver end-to-end systems, including AI-powered applications using
 embeddings and vector search (pgvector). Combines a solid foundation in
 computing and electronic engineering with practical industry experience to build
 eﬃcient, reliable, and scalable solutions.`,
   highlights: [
-    "2+ years building full-stack web and mobile apps with React, React Native, and Node.js",
-    "Backend-focused developer experienced with FastAPI, PostgreSQL, SQLAlchemy, Docker, and pgvector",
+    "years building full-stack web and mobile apps with React, React Native, and Node.js",
+    "Backend-focused developer experienced with FastAPI, ASP.NET Core, PostgreSQL, SQLAlchemy, Docker, and pgvector",
     "Improves production reliability through database optimization and Playwright end-to-end testing",
     "Builds AI-powered products using embeddings, vector search, and structured data extraction",
   ],
@@ -98,6 +98,22 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    name: "Banking API – ASP.NET Core Backend Application",
+    date: "Aug 2026",
+    href: "https://github.com/ljrshawn/MiniBank",
+    tags: [
+      "C#",
+      "ASP.NET Core",
+      "Entity FrameWork Core",
+      "Docker",
+      "PostgreSQL",
+    ],
+    summary: `
+    • Developing a RESTful banking backend using C#, ASP.NET Core, Entity Framework Core, and PostgreSQL, supporting account and transaction management workflows.
+    • Designed API endpoints using ASP.NET Core Minimal APIs with DTO-based request and response models, validation, and appropriate HTTP status codes.
+    • Applied dependency injection and service-layer architecture to separate API, business logic, and data-access responsibilities.`,
+  },
   {
     name: "AI Job Search Copilot – Full-Stack AI Resume Matching Platform",
     date: "Apr 2026",
